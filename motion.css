@@ -1,0 +1,33 @@
+/* A slow camera move across the supplied concept image; all content remains visible without JS. */
+.hero{isolation:isolate;background-image:none;background-color:#101010}
+.hero::before{content:"";position:absolute;inset:-3%;z-index:-2;background:url('assets/hero-konzept.webp') 65% center/cover;transform:scale(1.08);animation:hero-camera 18s ease-in-out infinite alternate;will-change:transform}
+.hero .shade{z-index:-1}
+.motion-toggle{position:absolute;bottom:31px;right:24px;z-index:3;min-height:44px;padding:8px 12px;border:1px solid #ffffff55;border-radius:4px;background:#101010bb;color:#ddd;font-size:11px;cursor:pointer}
+.motion-toggle:hover{border-color:var(--orange);color:var(--fg)}
+.motion-paused .hero::before,.motion-paused .hero-progress-track::after{animation-play-state:paused}
+@keyframes hero-camera{from{transform:scale(1.08) translateX(1%)}to{transform:scale(1.015) translateX(-1%)}}
+.hero-content>.eyebrow{animation:hero-copy .65s ease-out both}
+.hero-content h1{animation:hero-copy .85s .15s ease-out both}
+.hero-content .intro{animation:hero-copy .85s .35s ease-out both}
+.hero-content .hero-actions{animation:hero-copy .85s .55s ease-out both}
+@keyframes hero-copy{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-progress{position:absolute;bottom:32px;left:clamp(24px,8vw,140px);display:flex;align-items:center;gap:14px;font-size:12px;color:#ddd;letter-spacing:.03em}
+.hero-progress-track{display:block;width:68px;height:2px;background:#ffffff40;overflow:hidden}
+.hero-progress-track::after{content:"";display:block;width:28px;height:2px;background:var(--orange);animation:hero-track 3s ease-in-out infinite}
+@keyframes hero-track{0%{transform:translateX(-28px)}70%,100%{transform:translateX(70px)}}
+.image-note{bottom:9px;margin-bottom:0}
+.motion-ready .scroll-reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.25,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-ready .scroll-reveal.is-waiting{opacity:0;transform:translateY(28px)}
+.motion-ready .scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;pointer-events:none;transform:scaleX(0);transform-origin:left;background:var(--orange)}
+@supports(animation-timeline:scroll()){
+ .scroll-progress{animation:reading-progress linear both;animation-timeline:scroll(root)}
+ @keyframes reading-progress{to{transform:scaleX(1)}}
+}
+@media(max-width:760px){.hero::before{background-position:62% center}.hero-progress{left:24px;bottom:92px}.motion-toggle{left:24px;right:auto;bottom:42px}.hero-content{padding-bottom:165px}}
+@media(prefers-reduced-motion:reduce){
+ .hero::before{animation:none;transform:none;will-change:auto}
+ .hero-content>.eyebrow,.hero-content h1,.hero-content .intro,.hero-content .hero-actions,.hero-progress-track::after,.scroll-progress{animation:none}
+ .motion-ready .scroll-reveal,.motion-ready .scroll-reveal.is-waiting,.motion-ready .scroll-reveal.is-visible{transition:none;opacity:1;transform:none}
+ .hero-progress-track::after{width:100%}
+}
