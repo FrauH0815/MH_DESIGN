@@ -1,6 +1,6 @@
 /* A slow camera move across the supplied concept image; all content remains visible without JS. */
 .hero{isolation:isolate;background-image:none;background-color:#101010}
-.hero::before{content:"";position:absolute;inset:-3%;z-index:-2;background:url('assets/hero-konzept.webp') 65% center/cover;transform:scale(1.08);animation:hero-camera 18s ease-in-out infinite alternate;will-change:transform}
+.hero::before{content:"";position:absolute;inset:-3%;z-index:-2;background:url('assets/hero-natuerlich.webp') 65% center/cover;transform:scale(1.08);animation:hero-camera 18s ease-in-out infinite alternate;will-change:transform}
 .hero .shade{z-index:-1}
 .motion-toggle{position:absolute;bottom:31px;right:24px;z-index:3;min-height:44px;padding:8px 12px;border:1px solid #ffffff55;border-radius:4px;background:#101010bb;color:#ddd;font-size:11px;cursor:pointer}
 .motion-toggle:hover{border-color:var(--orange);color:var(--fg)}
