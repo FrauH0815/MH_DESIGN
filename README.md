@@ -1,12 +1,12 @@
 # MH Design – Website (Entwicklung)
 
-Startseite für MH Design, Fahrzeugaufbereitung & Smart Repair in Mihla.
+Unveröffentlichter Entwurf. Kein Deployment im Rahmen dieser Änderung.
 
-## Medien
-Die Startseite referenziert **assets/1275.mp4** als stummes, automatisch wiederholtes Hero-Video und **assets/1268.png** als Vorschaubild. Diese Binärdateien müssen noch in den Ordner `assets/` hochgeladen werden. Bis dahin wird ein dunkler Hintergrund angezeigt.
+## Videoblog
+`index.html#videoblog` verlinkt auf `videoblog.html`. Der Player verwendet `assets/mh-design-01.mp4`: die bereitgestellte Datei download(1).mp4, unverändert, 1920 × 1080, 15 Sekunden, ohne Ton.
 
 ## Vorschau
-`index.html` lokal im Browser öffnen. Kein Build-Schritt nötig.
+`python3 -m http.server 8000` im Projektordner starten und http://localhost:8000/videoblog.html öffnen.
 
-## Status
-Entwurf. Keine Veröffentlichung auf Netlify ohne ausdrückliche Freigabe. Impressum und Datenschutzerklärung vor Veröffentlichung ergänzen und prüfen.
+## Vor Veröffentlichung
+Original-Logo, Kontaktdaten und rechtliche Angaben prüfen; Impressum und Datenschutz ergänzen. Keine Veröffentlichung ohne ausdrückliche Freigabe. Das GitHub-Repository selbst ist öffentlich.
