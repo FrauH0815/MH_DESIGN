@@ -1,5 +1,6 @@
 .service-instruction{color:#aaa;font-size:14px;margin:0 0 24px}
 .service-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.service-categories{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0 0 28px;padding-bottom:18px;border-bottom:1px solid var(--border)}.service-categories a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;border-bottom:2px solid transparent}.service-categories a:hover{color:var(--orange);border-color:var(--orange)}
 .service-tile{background:#242629;border:1px solid #45474a;border-radius:12px;overflow:hidden;scroll-margin-top:25px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
 .service-tile:nth-child(2){background:#292b2e}.service-tile:nth-child(3){background:#202225}
 .service-tile summary{display:flex;flex-direction:column;list-style:none;cursor:pointer;padding:30px;min-height:380px;height:var(--service-summary-height,auto)}

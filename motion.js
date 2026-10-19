@@ -11,6 +11,13 @@
     reduced.addEventListener('change', event => { toggle.hidden = event.matches; });
   }
   if (reduced.matches || !('IntersectionObserver' in window)) return;
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const heroObserver = new IntersectionObserver(entries => {
+      hero.classList.toggle('hero-in-view', entries[0].isIntersecting);
+    }, { threshold: .12 });
+    heroObserver.observe(hero);
+  }
   const targets = document.querySelectorAll('.services > h2, .service-deck, .service-consult, .video-heading, .video-grid, .about > div, #ablauf > h2, .steps, .faq > h2, .contact > div');
   document.documentElement.classList.add('motion-ready');
   const observer = new IntersectionObserver(entries => {

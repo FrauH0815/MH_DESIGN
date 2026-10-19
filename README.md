@@ -41,3 +41,9 @@ Browser-Prüfung und Screenshots: siehe `docs/qa/PRUEFBERICHT.md`.
 ## Veröffentlichung
 
 Kontaktdaten sind vom Nutzer bestätigt. Impressum und Datenschutz sind jetzt als Kursprojekt-Fassung in impressum.html und datenschutz.html eingebaut und im Footer verlinkt. Die echte Umsatzsteuer-ID ist auf Nutzerwunsch ausgelassen; GitHub Pages ist als vorgesehenes Hosting berücksichtigt. Diese Projektfassung ist kein vollständiger Rechtstext für einen echten Geschäftsbetrieb. Register-/Kammerangaben, Verbraucherschlichtung und tatsächliche Vertragsgrundlagen sind vor einem solchen Einsatz zu prüfen. Veröffentlichung vom Nutzer am 19.10.2026 ausdrücklich freigegeben. GitHub Pages verwendet main und das Stammverzeichnis. `noindex,nofollow` bleibt für das Kursprojekt gesetzt.
+
+## SEO und Linkvorschau
+
+Stand 19.10.2026: Canonical-URLs und Open-Graph-Vorschauen auf den vier Inhaltsseiten, strukturierte Betriebsdaten auf der Startseite. Bei Domainwechsel die absoluten URLs anpassen.
+
+Auf ausdruecklichen Nutzerwunsch bleibt noindex,nofollow auf allen Seiten erhalten. Keine gewuenschte Aufnahme in Google oder KI-Suchergebnisse; keine Sitemap oder Suchmaschinen-Anmeldung eingerichtet. Das ist kein Zugriffsschutz. Metadaten garantieren keine KI-Empfehlung.
